@@ -1,20 +1,20 @@
-import { fileURLToPath, URL } from 'node:url'
+import { URL, fileURLToPath } from 'node:url'
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueDevTools from 'vite-plugin-vue-devtools'
 import { config } from '@en/config'
+import { defineConfig } from 'vite'
+import { registerPlugins } from './build'
 
 // https://vite.dev/config/
-export default defineConfig({
-    plugins: [vue(), vueJsx(), vueDevTools()],
-    resolve: {
-        alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url))
+export default defineConfig(() => {
+    return {
+        plugins: registerPlugins(),
+        resolve: {
+            alias: {
+                '@': fileURLToPath(new URL('./src', import.meta.url))
+            }
+        },
+        server: {
+            port: config.port.web
         }
-    },
-    server: {
-        port: config.port.web
     }
 })
