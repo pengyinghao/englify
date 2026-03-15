@@ -17,14 +17,18 @@ declare module 'vue' {
     AButton: typeof import('antdv-next')['Button']
     AConfigProvider: typeof import('antdv-next')['ConfigProvider']
     AMenu: typeof import('antdv-next')['Menu']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }
 
 // For TSX support
 declare global {
-    const ABreadcrumb: (typeof import('antdv-next'))['Breadcrumb']
-    const ABreadcrumbItem: (typeof import('antdv-next'))['BreadcrumbItem']
-    const AButton: (typeof import('antdv-next'))['Button']
-    const AConfigProvider: (typeof import('antdv-next'))['ConfigProvider']
-    const AMenu: (typeof import('antdv-next'))['Menu']
+  const ABreadcrumb: typeof import('antdv-next')['Breadcrumb']
+  const ABreadcrumbItem: typeof import('antdv-next')['BreadcrumbItem']
+  const AButton: typeof import('antdv-next')['Button']
+  const AConfigProvider: typeof import('antdv-next')['ConfigProvider']
+  const AMenu: typeof import('antdv-next')['Menu']
+  const RouterLink: typeof import('vue-router')['RouterLink']
+  const RouterView: typeof import('vue-router')['RouterView']
 }

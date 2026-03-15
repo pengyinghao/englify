@@ -14,7 +14,14 @@ export default defineConfig(() => {
             }
         },
         server: {
-            port: config.port.web
+            port: config.port.web,
+            proxy: {
+                '/api': {
+                    target: 'http://localhost:3000',
+                    changeOrigin: true,
+                    rewrite: (path) => path.replace(/^\/api/, '')
+                }
+            }
         }
     }
 })

@@ -39,6 +39,8 @@ model User {
     wordBookRecords WordBookRecord[]
     paymentRecords  PaymentRecord[]
     courseRecords   CourseRecord[]
+
+    @@map("user")
 }
 
 //记录已操作的单词
@@ -53,6 +55,7 @@ model WordBookRecord {
     word      WordBook @relation(fields: [wordId], references: [id], onDelete: Cascade)
 
     @@unique([userId, wordId])
+    @@map("word_book_record")
 }
 
 //单词表
@@ -84,6 +87,7 @@ model WordBook {
     @@index([word])
     @@index([tag])
     @@index([word, tag])
+    @@map("word_book")
 }
 
 //支付记录
@@ -103,6 +107,7 @@ model PaymentRecord {
     courseRecords CourseRecord[]
 
     @@index([tradeNo])
+    @@map("payment_record")
 }
 
 model CourseRecord {
@@ -118,6 +123,7 @@ model CourseRecord {
     course          Course         @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
     @@unique([userId, courseId])
+    @@map("course_record")
 }
 
 model Course {
@@ -131,4 +137,6 @@ model Course {
     createdAt     DateTime       @default(now()) // 创建时间
     updatedAt     DateTime       @updatedAt // 更新时间
     courseRecords CourseRecord[]
+
+    @@map("course")
 }
