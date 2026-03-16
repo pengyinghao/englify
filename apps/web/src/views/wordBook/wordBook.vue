@@ -207,7 +207,6 @@ onMounted(() => {
                                 </span>
                             </div>
                         </div>
-
                         <!-- Stats -->
                         <div class="bg-white/80 rounded-2xl p-6 shadow-sm border border-slate-200">
                             <div class="grid grid-cols-2 gap-4 text-center">
@@ -250,7 +249,7 @@ onMounted(() => {
                                             {{ item.word }}
                                         </h3>
                                         <p
-                                            class="text-sm text-slate-500 mt-1 flex items-center gap-1"
+                                            class="text-sm text-slate-500 mt-1 flex items-center gap-1 m-0"
                                         >
                                             <Icon name="mdi:volume-high" size="14" />
                                             {{ item.phonetic }}
@@ -280,57 +279,57 @@ onMounted(() => {
                                 <div class="flex flex-wrap gap-2 mt-4">
                                     <a-tag
                                         v-if="item.gk"
-                                        class="bg-blue-100 text-blue-700 border-blue-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#1d4ed8"
+                                        class="text-xs font-medium"
                                     >
                                         高考
                                     </a-tag>
                                     <a-tag
                                         v-if="item.zk"
-                                        class="bg-green-100 text-green-700 border-green-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#047857"
+                                        class="text-xs font-medium"
                                     >
                                         中考
                                     </a-tag>
                                     <a-tag
                                         v-if="item.gre"
-                                        class="bg-purple-100 text-purple-700 border-purple-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#6d28d9"
+                                        class="text-xs font-medium"
                                     >
                                         GRE
                                     </a-tag>
                                     <a-tag
                                         v-if="item.toefl"
-                                        class="bg-orange-100 text-orange-700 border-orange-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#ea580c"
+                                        class="text-xs font-medium"
                                     >
                                         TOEFL
                                     </a-tag>
                                     <a-tag
                                         v-if="item.ielts"
-                                        class="bg-cyan-100 text-cyan-700 border-cyan-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#0284c7"
+                                        class="text-xs font-medium"
                                     >
                                         IELTS
                                     </a-tag>
                                     <a-tag
                                         v-if="item.cet6"
-                                        class="bg-red-100 text-red-700 border-red-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#dc2626"
+                                        class="text-xs font-medium"
                                     >
                                         六级
                                     </a-tag>
                                     <a-tag
                                         v-if="item.cet4"
-                                        class="bg-pink-100 text-pink-700 border-pink-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#db2777"
+                                        class="text-xs font-medium"
                                     >
                                         四级
                                     </a-tag>
                                     <a-tag
                                         v-if="item.ky"
-                                        class="bg-yellow-100 text-yellow-700 border-yellow-200 rounded-lg px-2 py-1"
-                                        size="small"
+                                        color="#f97316"
+                                        class="text-xs font-medium"
                                     >
                                         考研
                                     </a-tag>
