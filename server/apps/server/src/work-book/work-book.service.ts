@@ -1,14 +1,14 @@
-import type { WordBookParams } from '@en/common/wordBook'
-import { PrismaService } from '@libs/shard'
-import { WordBookWhereInput } from '@libs/shard/generated/prisma/models'
+import { PrismaService } from '@libs/shared'
+import { WordBookWhereInput } from '@libs/shared/generated/prisma/models'
 import { Injectable } from '@nestjs/common'
 import { getPaginationRange } from './../../../../libs/core'
+import { WordBookQueryDto } from './dto/word-book.dto'
 
 @Injectable()
 export class WorkBookService {
     constructor(private prismaService: PrismaService) {}
 
-    async findAll(query: WordBookParams) {
+    async findAll(query: WordBookQueryDto) {
         const { page, pageSize, word, ...rest } = query
         const where: WordBookWhereInput = {
             word: word ? { contains: word } : undefined,

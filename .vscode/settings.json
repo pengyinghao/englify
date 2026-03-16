@@ -20,6 +20,9 @@
     "Englify",
     "Iconify",
     "ielts",
+    "markstream",
+    "oxlint",
+    "persistedstate",
     "unocss"
   ],
   "[vue]": {

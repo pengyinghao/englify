@@ -22,8 +22,10 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@libs/shard": ["libs/shared/src"],
-      "@libs/shard/*": ["libs/shared/src/*"]
+      "@libs/shared": ["libs/shared/src"],
+      "@libs/shared/*": ["libs/shared/src/*"],
+      "@libs/core": ["libs/core"],
+      "@libs/core/*": ["libs/core/*"]
     }
   },
   "include": ["**/*.ts", "../global.d.ts"]

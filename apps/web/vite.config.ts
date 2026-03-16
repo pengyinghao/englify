@@ -18,8 +18,25 @@ export default defineConfig(() => {
             proxy: {
                 '/api': {
                     target: 'http://localhost:3000',
-                    changeOrigin: true,
-                    rewrite: (path) => path.replace(/^\/api/, '')
+                    changeOrigin: true
+                }
+            }
+        },
+        css: {
+            devSourcemap: true
+        },
+        build: {
+            outDir: 'dist',
+            rollupOptions: {
+                output: {
+                    chunkFileNames: 'static/js/[name]-[hash].js',
+                    entryFileNames: 'static/js/[name]-[hash].js',
+                    assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
+                    manualChunks(id) {
+                        if (id.includes('node_modules')) {
+                            return id.toString().split('node_modules/')[1].replace('.pnpm/', '').split('/')[0]
+                        }
+                    }
                 }
             }
         }

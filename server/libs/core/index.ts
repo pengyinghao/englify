@@ -3,6 +3,4 @@ export * from './apiException/api.exception'
 
 export * from './decorators'
 
-export * from './utils/api.response'
-
 export * from './utils/index'

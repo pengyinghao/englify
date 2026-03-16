@@ -1,13 +1,15 @@
 import transformerCompileClass from '@unocss/transformer-compile-class'
-import {
-    defineConfig,
-    presetAttributify,
-    presetWind4,
-    transformerDirectives,
-    transformerVariantGroup
-} from 'unocss'
+import { defineConfig, presetAttributify, presetWind4, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { presetAntd } from '@antdv-next/unocss'
 export default defineConfig({
-    presets: [presetWind4(), presetAttributify()],
+    presets: [
+        presetWind4(),
+        presetAttributify(),
+        presetAntd({
+            prefix: 'a',
+            antPrefix: 'ant'
+        })
+    ],
     transformers: [transformerDirectives(), transformerVariantGroup(), transformerCompileClass()],
     shortcuts: {
         'wh-full': 'w-full h-full',

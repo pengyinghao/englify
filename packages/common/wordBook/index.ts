@@ -46,9 +46,24 @@ export interface IWordBook {
     updatedAt: string
 }
 
+/** 单词英语等级 */
+export type WordBookLevel = Pick<
+    IWordBook,
+    'gk' | 'zk' | 'gre' | 'toefl' | 'ielts' | 'cet4' | 'cet6' | 'ky'
+>
+
+export interface WordBookLevelOption {
+    /** 等级 */
+    key: keyof WordBookLevel
+    /** 等级对应的中文 */
+    label: string
+    /** 是否选中 */
+    check: boolean
+}
+
 /** 词库查询条件 */
-export type WordBookParams = {
+export type WordBookOption = {
     /** 索索关键字 */
     word?: string
 } & PageListOption &
-    Pick<IWordBook, 'gk' | 'zk' | 'gre' | 'toefl' | 'ielts' | 'cet4' | 'cet6' | 'ky'>
+    WordBookLevel

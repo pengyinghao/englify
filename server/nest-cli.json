@@ -30,13 +30,22 @@
                 "tsConfigPath": "apps/server/tsconfig.app.json"
             }
         },
-        "shard": {
+        "shared": {
             "type": "library",
-            "root": "libs/shard",
+            "root": "libs/shared",
             "entryFile": "index",
-            "sourceRoot": "libs/shard/src",
+            "sourceRoot": "libs/shared/src",
             "compilerOptions": {
-                "tsConfigPath": "libs/shard/tsconfig.lib.json"
+                "tsConfigPath": "libs/shared/tsconfig.lib.json"
+            }
+        },
+        "core": {
+            "type": "library",
+            "root": "libs/core",
+            "entryFile": "index",
+            "sourceRoot": "libs/core/src",
+            "compilerOptions": {
+                "tsConfigPath": "libs/core/tsconfig.lib.json"
             }
         }
     }

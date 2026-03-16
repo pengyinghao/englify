@@ -1,16 +1,9 @@
-import {
-    CallHandler,
-    ExecutionContext,
-    HttpStatus,
-    Injectable,
-    NestInterceptor
-} from '@nestjs/common'
+import { CallHandler, ExecutionContext, HttpStatus, Injectable, NestInterceptor } from '@nestjs/common'
 import { Reflector } from '@nestjs/core'
 import { Response } from 'express'
 import { Observable, map } from 'rxjs'
-import { NO_TRANSFORM } from '../decorators'
 import { ApiCode } from '../apiException/api.code'
-import { ApiResponse } from '../utils/api.response'
+import { NO_TRANSFORM } from '../decorators'
 
 @Injectable()
 export class ResponseInterceptor implements NestInterceptor {
@@ -33,7 +26,8 @@ export class ResponseInterceptor implements NestInterceptor {
                     if (res.statusCode === HttpStatus.CREATED) res.status(HttpStatus.OK)
                     return {
                         code: ApiCode.OK,
-                        data: data as unknown
+                        data: data,
+                        message: ''
                     }
                 })
             )

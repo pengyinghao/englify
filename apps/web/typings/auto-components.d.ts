@@ -12,11 +12,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    ABreadcrumb: typeof import('antdv-next')['Breadcrumb']
-    ABreadcrumbItem: typeof import('antdv-next')['BreadcrumbItem']
     AButton: typeof import('antdv-next')['Button']
+    ACard: typeof import('antdv-next')['Card']
+    ACheckbox: typeof import('antdv-next')['Checkbox']
     AConfigProvider: typeof import('antdv-next')['ConfigProvider']
-    AMenu: typeof import('antdv-next')['Menu']
+    AInput: typeof import('antdv-next')['Input']
+    APagination: typeof import('antdv-next')['Pagination']
+    ASpin: typeof import('antdv-next')['Spin']
+    ATag: typeof import('antdv-next')['Tag']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
@@ -24,11 +27,14 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
-  const ABreadcrumb: typeof import('antdv-next')['Breadcrumb']
-  const ABreadcrumbItem: typeof import('antdv-next')['BreadcrumbItem']
   const AButton: typeof import('antdv-next')['Button']
+  const ACard: typeof import('antdv-next')['Card']
+  const ACheckbox: typeof import('antdv-next')['Checkbox']
   const AConfigProvider: typeof import('antdv-next')['ConfigProvider']
-  const AMenu: typeof import('antdv-next')['Menu']
+  const AInput: typeof import('antdv-next')['Input']
+  const APagination: typeof import('antdv-next')['Pagination']
+  const ASpin: typeof import('antdv-next')['Spin']
+  const ATag: typeof import('antdv-next')['Tag']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
 }
