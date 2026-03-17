@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import zhCn from 'antdv-next/locale/zh_CN'
+import { Search } from './components'
 </script>
 
 <template>
@@ -11,7 +12,10 @@ import zhCn from 'antdv-next/locale/zh_CN'
             }
         }"
     >
-        <RouterView></RouterView>
+        <a-app>
+            <Search></Search>
+            <RouterView></RouterView>
+        </a-app>
     </a-config-provider>
 </template>
 

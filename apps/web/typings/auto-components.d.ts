@@ -12,11 +12,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AApp: typeof import('antdv-next')['App']
     AButton: typeof import('antdv-next')['Button']
     ACard: typeof import('antdv-next')['Card']
     ACheckbox: typeof import('antdv-next')['Checkbox']
     AConfigProvider: typeof import('antdv-next')['ConfigProvider']
     AInput: typeof import('antdv-next')['Input']
+    AModal: typeof import('antdv-next')['Modal']
     APagination: typeof import('antdv-next')['Pagination']
     ASpin: typeof import('antdv-next')['Spin']
     ATag: typeof import('antdv-next')['Tag']
@@ -27,11 +29,13 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
+  const AApp: typeof import('antdv-next')['App']
   const AButton: typeof import('antdv-next')['Button']
   const ACard: typeof import('antdv-next')['Card']
   const ACheckbox: typeof import('antdv-next')['Checkbox']
   const AConfigProvider: typeof import('antdv-next')['ConfigProvider']
   const AInput: typeof import('antdv-next')['Input']
+  const AModal: typeof import('antdv-next')['Modal']
   const APagination: typeof import('antdv-next')['Pagination']
   const ASpin: typeof import('antdv-next')['Spin']
   const ATag: typeof import('antdv-next')['Tag']

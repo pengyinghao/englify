@@ -26,20 +26,20 @@ function handleMenuClick(item: (typeof navItems)[number]) {
 
 <template>
     <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/50 shadow-sm"
+        class="border-b border-slate-200/50 bg-white/90 shadow-sm top-0 sticky z-50 backdrop-blur-md"
     >
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+        <div class="mx-auto px-4 max-w-7xl lg:px-8 sm:px-6">
+            <div class="flex h-16 items-center justify-between">
                 <!-- Logo -->
-                <div class="flex items-center gap-4">
+                <div class="flex gap-4 items-center">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg hover:shadow-xl transition-shadow duration-200 cursor-pointer"
+                        class="text-white font-bold rounded-2xl flex h-12 w-12 cursor-pointer shadow-lg transition-shadow duration-200 items-center justify-center from-emerald-500 to-teal-600 bg-gradient-to-br text-xl hover:shadow-xl"
                     >
                         E
                     </div>
                     <div class="hidden sm:block">
                         <h1
-                            class="text-xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent"
+                            class="text-transparent font-bold from-emerald-600 to-teal-600 bg-gradient-to-r bg-clip-text text-xl"
                         >
                             Englify
                         </h1>
@@ -48,37 +48,37 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                 </div>
 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-2">
+                <nav class="hidden items-center space-x-2 md:flex">
                     <a
                         v-for="item in navItems"
                         :key="item.path"
                         @click="handleMenuClick(item)"
-                        class="group flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200 cursor-pointer relative"
+                        class="group text-slate-600 px-4 py-2 rounded-xl flex gap-2 cursor-pointer transition-all duration-200 items-center relative hover:text-emerald-600 hover:bg-emerald-50"
                     >
                         <Icon
                             :name="item.icon"
                             size="18"
-                            class="group-hover:scale-110 transition-transform duration-200"
+                            class="transition-transform duration-200 group-hover:scale-110"
                         />
-                        <span class="text-sm font-medium">{{ item.label }}</span>
+                        <span class="font-medium text-sm">{{ item.label }}</span>
                         <div
-                            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-600 group-hover:w-full transition-all duration-200"
+                            class="h-0.5 w-0 transform transition-all duration-200 bottom-0 left-1/2 absolute from-emerald-500 to-teal-600 bg-gradient-to-r group-hover:w-full -translate-x-1/2"
                         ></div>
                     </a>
                 </nav>
 
                 <!-- Right Side -->
-                <div class="flex items-center gap-4">
+                <div class="flex gap-4 items-center">
                     <!-- Stats -->
-                    <div class="hidden lg:flex items-center gap-3">
+                    <div class="gap-3 hidden items-center lg:flex">
                         <div
-                            class="flex items-center gap-2 bg-gradient-to-r from-amber-50 to-orange-50 text-amber-700 rounded-xl px-4 py-2 border border-amber-200/50"
+                            class="to-orange-50 text-amber-700 px-4 py-2 border-amber-200/50 rounded-xl flex gap-2 items-center from-amber-50 bg-gradient-to-r border"
                         >
                             <Icon name="mdi:weather-sunny" size="16" />
                             <span class="font-semibold text-sm">{{ 0 }}</span>
                         </div>
                         <div
-                            class="flex items-center gap-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-xl px-4 py-2 border border-blue-200/50"
+                            class="from-blue-50 text-blue-700 border-blue-200/50 px-4 py-2 rounded-xl flex gap-2 items-center to-indigo-50 bg-gradient-to-r border"
                         >
                             <Icon name="mdi:star" size="16" />
                             <span class="font-semibold text-sm">{{ 0 }}</span>
@@ -86,19 +86,19 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                     </div>
 
                     <!-- User Info -->
-                    <div class="flex items-center gap-3 border-l border-slate-200/50 pl-4">
+                    <div class="pl-4 border-l border-slate-200/50 flex gap-3 items-center">
                         <div class="relative">
                             <img
-                                class="w-10 h-10 rounded-xl ring-2 ring-emerald-200 hover:ring-emerald-300 transition-all duration-200 cursor-pointer"
+                                class="rounded-xl h-10 w-10 cursor-pointer ring-2 ring-emerald-200 transition-all duration-200 hover:ring-emerald-300"
                                 src="https://gips3.baidu.com/it/u=3493347002,3356558679&fm=3074&app=3074&f=PNG?w=2048&h=2048"
                                 alt="User avatar"
                             />
                             <div
-                                class="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full border-2 border-white"
+                                class="border-2 rounded-full h-4 w-4 absolute from-emerald-500 to-teal-600 bg-gradient-to-r border-white -bottom-1 -right-1"
                             ></div>
                         </div>
                         <div class="hidden sm:block">
-                            <div class="text-sm font-semibold text-slate-700">未登录</div>
+                            <div class="text-slate-700 font-semibold text-sm">未登录</div>
                             <div class="text-xs text-slate-500">点击登录</div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                     <!-- Mobile Menu Button -->
                     <button
                         @click="toggleMobileMenu"
-                        class="md:hidden p-2 rounded-xl text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200"
+                        class="text-slate-600 p-2 rounded-xl transition-all duration-200 hover:text-emerald-600 hover:bg-emerald-50 md:hidden"
                     >
                         <Icon :name="isMobileMenuOpen ? 'mdi:close' : 'mdi:menu'" size="24" />
                     </button>
@@ -116,29 +116,29 @@ function handleMenuClick(item: (typeof navItems)[number]) {
             <!-- Mobile Navigation -->
             <div
                 v-if="isMobileMenuOpen"
-                class="md:hidden border-t border-slate-200/50 bg-white/95 backdrop-blur-md animate-in slide-in-from-top-2 duration-200"
+                class="animate-in slide-in-from-top-2 border-t border-slate-200/50 bg-white/95 duration-200 backdrop-blur-md md:hidden"
             >
                 <nav class="px-4 py-4 space-y-2">
                     <a
                         v-for="item in navItems"
                         :key="item.path"
                         @click="handleMenuClick(item)"
-                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200 cursor-pointer"
+                        class="text-slate-600 px-4 py-3 rounded-xl flex gap-3 cursor-pointer transition-all duration-200 items-center hover:text-emerald-600 hover:bg-emerald-50"
                     >
                         <Icon :name="item.icon" size="20" />
-                        <span class="text-sm font-medium">{{ item.label }}</span>
+                        <span class="font-medium text-sm">{{ item.label }}</span>
                     </a>
                 </nav>
                 <div class="px-4 py-4 border-t border-slate-200/50">
-                    <div class="flex items-center justify-center gap-4 mb-4">
+                    <div class="mb-4 flex gap-4 items-center justify-center">
                         <div
-                            class="flex items-center gap-2 bg-gradient-to-r from-amber-50 to-orange-50 text-amber-700 rounded-xl px-4 py-2 border border-amber-200/50"
+                            class="to-orange-50 text-amber-700 px-4 py-2 border-amber-200/50 rounded-xl flex gap-2 items-center from-amber-50 bg-gradient-to-r border"
                         >
                             <Icon name="mdi:weather-sunny" size="16" />
                             <span class="font-semibold text-sm">{{ 0 }}</span>
                         </div>
                         <div
-                            class="flex items-center gap-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-xl px-4 py-2 border border-blue-200/50"
+                            class="from-blue-50 text-blue-700 border-blue-200/50 px-4 py-2 rounded-xl flex gap-2 items-center to-indigo-50 bg-gradient-to-r border"
                         >
                             <Icon name="mdi:star" size="16" />
                             <span class="font-semibold text-sm">{{ 0 }}</span>

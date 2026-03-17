@@ -1,3 +1,4 @@
+import unocss from '@unocss/eslint-config/flat'
 import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
 import skipFormatting from 'eslint-config-prettier/flat'
 import pluginOxlint from 'eslint-plugin-oxlint'
@@ -19,6 +20,7 @@ export default defineConfigWithVueTs(
 
     ...pluginVue.configs['flat/essential'],
     vueTsConfigs.recommended,
+    unocss,
 
     ...pluginOxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
     {

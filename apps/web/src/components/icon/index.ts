@@ -1,2 +1,2 @@
-import Icon from './Icon.vue'
+import Icon from './icon.vue'
 export { Icon }
