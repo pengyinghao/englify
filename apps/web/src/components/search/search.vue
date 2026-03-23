@@ -75,9 +75,9 @@ function handleClose() {
                 @click="handleCopyWord(item.word)"
                 v-for="item in wordBookInfos"
                 :key="item.id"
-                class="hover:bg-blue-50 text-gray-800 p-4 cursor-pointer shadow-sm bg-white hover:shadow-md"
+                class="text-gray-800 p-4 cursor-pointer shadow-sm bg-white hover:bg-emerald-50 hover:shadow-md"
             >
-                <div class="text-blue-600 font-semibold mb-1 text-sm">{{ item.word }}</div>
+                <div class="text-emerald-600 font-semibold mb-1 text-sm">{{ item.word }}</div>
                 <div
                     v-html="item.translation"
                     class="text-gray-700 mb-1 overflow-hidden line-clamp-2 text-sm"

@@ -88,7 +88,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="via-blue-50 min-h-screen from-slate-50 to-emerald-50 bg-gradient-to-br">
+    <div class="to-green-50 min-h-screen from-slate-50 via-emerald-50 bg-gradient-to-br">
         <div class="mx-auto px-4 py-8 max-w-7xl lg:px-8 sm:px-6">
             <!-- Hero Section (compact) -->
             <div class="mb-8 text-center">
@@ -96,7 +96,7 @@ onMounted(() => {
                     class="mx-auto px-5 py-3 border-white/20 rounded-2xl bg-white/80 inline-flex gap-3 max-w-3xl items-center backdrop-blur-sm border shadow md:shadow-lg"
                 >
                     <div
-                        class="rounded-xl flex h-10 w-10 items-center justify-center from-emerald-500 to-teal-600 bg-gradient-to-br shadow"
+                        class="to-green-600 rounded-xl flex h-10 w-10 items-center justify-center from-emerald-500 bg-gradient-to-br shadow"
                     >
                         <Icon name="mdi:book-open-page-variant" size="20" class="text-white" />
                     </div>
@@ -132,7 +132,7 @@ onMounted(() => {
                                     <a-button
                                         type="primary"
                                         @click="handleSearch"
-                                        class="px-8 border-0 rounded-xl h-12 shadow-lg transition-all duration-200 from-emerald-500 to-teal-600 bg-gradient-to-r hover:shadow-xl"
+                                        class="to-green-600 px-8 border-0 rounded-xl h-12 shadow-lg transition-all duration-200 from-emerald-500 bg-gradient-to-r hover:shadow-xl"
                                     >
                                         <Icon name="mdi:magnify" size="18" class="mr-2" />
                                         搜索
@@ -183,7 +183,7 @@ onMounted(() => {
                     <div class="space-y-6 lg:col-span-2">
                         <!-- Active Filters -->
                         <div
-                            class="p-6 border-emerald-100 rounded-2xl from-emerald-50 to-teal-50 bg-gradient-to-r border"
+                            class="to-green-50 p-6 border-emerald-100 rounded-2xl from-emerald-50 bg-gradient-to-r border"
                         >
                             <div class="mb-4 flex gap-2 items-center">
                                 <Icon name="mdi:filter-check" size="18" class="text-emerald-600" />
@@ -193,7 +193,7 @@ onMounted(() => {
                                 <span
                                     v-for="option in activeLevelInfos"
                                     :key="option.key"
-                                    class="text-white font-medium px-4 py-2 rounded-full inline-flex gap-1 shadow-md items-center from-emerald-500 to-teal-600 bg-gradient-to-r text-sm"
+                                    class="to-green-600 text-white font-medium px-4 py-2 rounded-full inline-flex gap-1 shadow-md items-center from-emerald-500 bg-gradient-to-r text-sm"
                                 >
                                     <Icon name="mdi:check" size="14" />
                                     {{ option.label }}
@@ -217,7 +217,7 @@ onMounted(() => {
                                     <div class="text-slate-600 text-sm">总单词数</div>
                                 </div>
                                 <div>
-                                    <div class="text-2xl text-teal-600 font-bold">
+                                    <div class="text-green-600 text-2xl font-bold">
                                         {{ activeLevelInfos.length }}
                                     </div>
                                     <div class="text-slate-600 text-sm">筛选条件</div>
@@ -279,56 +279,56 @@ onMounted(() => {
                                 <div class="mt-4 flex flex-wrap gap-2">
                                     <a-tag
                                         v-if="item.gk"
-                                        color="#1d4ed8"
+                                        color="#14532d"
                                         class="text-xs font-medium"
                                     >
                                         高考
                                     </a-tag>
                                     <a-tag
                                         v-if="item.zk"
-                                        color="#047857"
+                                        color="#166534"
                                         class="text-xs font-medium"
                                     >
                                         中考
                                     </a-tag>
                                     <a-tag
                                         v-if="item.gre"
-                                        color="#6d28d9"
+                                        color="#15803d"
                                         class="text-xs font-medium"
                                     >
                                         GRE
                                     </a-tag>
                                     <a-tag
                                         v-if="item.toefl"
-                                        color="#ea580c"
+                                        color="#16a34a"
                                         class="text-xs font-medium"
                                     >
                                         TOEFL
                                     </a-tag>
                                     <a-tag
                                         v-if="item.ielts"
-                                        color="#0284c7"
+                                        color="#22c55e"
                                         class="text-xs font-medium"
                                     >
                                         IELTS
                                     </a-tag>
                                     <a-tag
                                         v-if="item.cet6"
-                                        color="#dc2626"
+                                        color="#4d7c0f"
                                         class="text-xs font-medium"
                                     >
                                         六级
                                     </a-tag>
                                     <a-tag
                                         v-if="item.cet4"
-                                        color="#db2777"
+                                        color="#65a30d"
                                         class="text-xs font-medium"
                                     >
                                         四级
                                     </a-tag>
                                     <a-tag
                                         v-if="item.ky"
-                                        color="#f97316"
+                                        color="#84cc16"
                                         class="text-xs font-medium"
                                     >
                                         考研
@@ -338,7 +338,7 @@ onMounted(() => {
 
                             <!-- Hover Effect Overlay -->
                             <div
-                                class="opacity-0 pointer-events-none transition-opacity duration-300 inset-0 absolute from-emerald-500/5 to-teal-500/5 bg-gradient-to-r group-hover:opacity-100"
+                                class="to-green-500/5 opacity-0 pointer-events-none transition-opacity duration-300 inset-0 absolute from-emerald-500/5 bg-gradient-to-r group-hover:opacity-100"
                             />
                         </a-card>
                     </template>

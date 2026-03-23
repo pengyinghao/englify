@@ -5,6 +5,9 @@ node_modules/
 
 
 /generated/prisma
+# Prisma generated code in server workspace
+server/libs/shared/src/generated/
+
 # Logs
 logs
 *.log

@@ -4,6 +4,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+const route = useRoute()
 const isMobileMenuOpen = ref(false)
 
 const toggleMobileMenu = () => {
@@ -33,13 +34,13 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                 <!-- Logo -->
                 <div class="flex gap-4 items-center">
                     <div
-                        class="text-white font-bold rounded-2xl flex h-12 w-12 cursor-pointer shadow-lg transition-shadow duration-200 items-center justify-center from-emerald-500 to-teal-600 bg-gradient-to-br text-xl hover:shadow-xl"
+                        class="to-green-600 text-white font-bold rounded-2xl flex h-12 w-12 cursor-pointer shadow-lg transition-shadow duration-200 items-center justify-center from-emerald-500 bg-gradient-to-br text-xl hover:shadow-xl"
                     >
                         E
                     </div>
                     <div class="hidden sm:block">
                         <h1
-                            class="text-transparent font-bold from-emerald-600 to-teal-600 bg-gradient-to-r bg-clip-text text-xl"
+                            class="to-green-600 text-transparent font-bold from-emerald-600 bg-gradient-to-r bg-clip-text text-xl"
                         >
                             Englify
                         </h1>
@@ -54,15 +55,18 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                         :key="item.path"
                         @click="handleMenuClick(item)"
                         class="group text-slate-600 px-4 py-2 rounded-xl flex gap-2 cursor-pointer transition-all duration-200 items-center relative hover:text-emerald-600 hover:bg-emerald-50"
+                        :class="{ 'bg-emerald-50 text-emerald-600!': route.path === item.path }"
                     >
                         <Icon
                             :name="item.icon"
                             size="18"
                             class="transition-transform duration-200 group-hover:scale-110"
+                            :class="{ 'scale-110': route.path === item.path }"
                         />
                         <span class="font-medium text-sm">{{ item.label }}</span>
                         <div
-                            class="h-0.5 w-0 transform transition-all duration-200 bottom-0 left-1/2 absolute from-emerald-500 to-teal-600 bg-gradient-to-r group-hover:w-full -translate-x-1/2"
+                            class="to-green-600 h-0.5 w-0 transform transition-all duration-200 bottom-0 left-1/2 absolute from-emerald-500 bg-gradient-to-r group-hover:w-full -translate-x-1/2"
+                            :class="{ 'w-full': route.path === item.path }"
                         ></div>
                     </a>
                 </nav>
@@ -78,7 +82,7 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                             <span class="font-semibold text-sm">{{ 0 }}</span>
                         </div>
                         <div
-                            class="from-blue-50 text-blue-700 border-blue-200/50 px-4 py-2 rounded-xl flex gap-2 items-center to-indigo-50 bg-gradient-to-r border"
+                            class="to-green-50 text-emerald-700 px-4 py-2 border-emerald-200/50 rounded-xl flex gap-2 items-center from-emerald-50 bg-gradient-to-r border"
                         >
                             <Icon name="mdi:star" size="16" />
                             <span class="font-semibold text-sm">{{ 0 }}</span>
@@ -94,7 +98,7 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                                 alt="User avatar"
                             />
                             <div
-                                class="border-2 rounded-full h-4 w-4 absolute from-emerald-500 to-teal-600 bg-gradient-to-r border-white -bottom-1 -right-1"
+                                class="to-green-600 border-2 rounded-full h-4 w-4 absolute from-emerald-500 bg-gradient-to-r border-white -bottom-1 -right-1"
                             ></div>
                         </div>
                         <div class="hidden sm:block">
@@ -138,7 +142,7 @@ function handleMenuClick(item: (typeof navItems)[number]) {
                             <span class="font-semibold text-sm">{{ 0 }}</span>
                         </div>
                         <div
-                            class="from-blue-50 text-blue-700 border-blue-200/50 px-4 py-2 rounded-xl flex gap-2 items-center to-indigo-50 bg-gradient-to-r border"
+                            class="to-green-50 text-emerald-700 px-4 py-2 border-emerald-200/50 rounded-xl flex gap-2 items-center from-emerald-50 bg-gradient-to-r border"
                         >
                             <Icon name="mdi:star" size="16" />
                             <span class="font-semibold text-sm">{{ 0 }}</span>

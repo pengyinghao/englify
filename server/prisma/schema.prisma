@@ -10,6 +10,11 @@ generator client {
     moduleFormat = "cjs" // 模块格式
 }
 
+generator zod {
+    provider = "prisma-zod-generator"
+    output   = "../libs/shared/src/generated/zod"
+}
+
 datasource db {
     provider = "postgresql"
 }

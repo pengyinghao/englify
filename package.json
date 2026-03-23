@@ -7,6 +7,8 @@
         "web:build": "pnpm --filter @en/web build",
         "ai:dev": "pnpm --filter @en/server start:dev ai",
         "server:dev": "pnpm --filter @en/server start:dev",
+        "server:generate": "pnpm --filter @en/server run prisma:generate",
+        "server:postinstall": "pnpm --filter @en/server run postinstall",
         "dev": "concurrently \"pnpm web:dev\" \"pnpm ai:dev\" \"pnpm server:dev\"",
         "web:lint": "pnpm --filter @en/web lint",
         "server:lint": "pnpm --filter @en/server lint",
